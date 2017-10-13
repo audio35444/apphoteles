@@ -15,7 +15,7 @@ const {titleStyle,containerStyle,subtitleStyle,textContainer} = require('./style
 class TextView extends Component{
   render(){
     return(
-      <View style={textContainer}>
+      <View style={{marginRight:65,marginLeft:10}}>
         <Text style={titleStyle}>{this.props.headerText}</Text>
         <Text style={subtitleStyle}>{this.props.dateTime}</Text>
       </View>

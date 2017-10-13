@@ -14,6 +14,7 @@ import {
 const {hotelRowStyle,bodyStyle,backgroundImage,btnStyle,rowListViewStyle,listViewStyle,nameHotelStyle,detalleHotelStyle} = require('./styles.js');
 const JSONHoteles = require('../../db/hoteles.js');
 const HotelDetail = require('../detail/hotelDetail.js');
+const Stars = require('../stars/stars.js');
 
 class Body extends Component{
   constructor(props){
@@ -55,8 +56,10 @@ class Body extends Component{
           borderBottomLeftRadius={10}
           borderBottomRightRadius={10}
           >
-            <Text style={nameHotelStyle}>{hotel.name}</Text>
+            <View style={{flexDirection:'column'}}><Text style={nameHotelStyle}>{hotel.name}</Text>
             <Text style={detalleHotelStyle}>ARG {hotel.price}</Text>
+            <Stars size={15} cantStars={hotel.serviceType} color={'yellow'}/>
+            </View>
           </View>
         </View>
       </TouchableHighlight>

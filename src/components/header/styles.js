@@ -1,5 +1,41 @@
 import {StyleSheet} from 'react-native';
 const styles = StyleSheet.create({
+  leftContainer: {
+  flex: 1,
+  flexDirection: 'column',
+  justifyContent: 'flex-start'
+  },
+  rightContainer: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'flex-end',
+    alignItems: 'center',
+  },
+  centerContainer: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  navBarR: {
+    backgroundColor:'rgba(223, 104, 0, 1)',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    height:50,
+  },
+  navBarR1: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    height:20,
+  },
+  navBarC: {
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    height:50,
+  },
   containerStyle:{
     backgroundColor:'rgba(223, 104, 0, 1)',
     justifyContent:'center',
@@ -14,11 +50,13 @@ const styles = StyleSheet.create({
   },
   titleStyle:{
     fontSize:20,
-    color:'white'
+    color:'white',
+    marginLeft:15
   },
   subtitleStyle:{
     fontSize:15,
-    color:'white'
+    color:'white',
+    marginLeft:15
   },
   textContainer:{
     flexDirection:'column',
@@ -36,7 +74,7 @@ const styles = StyleSheet.create({
   },
   imgViewStyle:{
     height:50,
-    width:50
+    width:50,
   }
 });
 module.exports = styles;
