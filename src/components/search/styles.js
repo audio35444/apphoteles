@@ -43,7 +43,45 @@ const styles = StyleSheet.create({
     borderRadius:3,
     borderColor: 'rgba(0,0,0,0.1)',
     borderWidth: 2,
-    margin:10
-  }
+    width:250,
+    marginLeft:10,
+    marginRight:10
+  },
+  leftContainer: {
+  flex: 1,
+  flexDirection: 'row',
+  justifyContent: 'flex-start'
+  },
+  rightContainer: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'flex-end',
+    alignItems: 'center',
+  },
+  rightContainer1: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'flex-end',
+    alignItems: 'center',
+  },
+  centerContainer: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop:10,
+    marginBottom:10
+  },
+  navBarR: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    height:50,
+  },
+  navBarR1: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
 });
 module.exports = styles;

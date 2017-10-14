@@ -86,6 +86,15 @@ const styles = StyleSheet.create({
     borderRadius:10,
     backgroundColor:'rgba(52,52,52,0)',
     overflow:'hidden'
+  },
+  textInput:{
+    height:30,
+    borderWidth:1,
+    borderColor:'rgba(255,255,255,0.5)',
+    marginTop:10,
+    marginBottom:10,
+    borderRadius:2
+
   }
 });
 module.exports = styles;

@@ -29,12 +29,12 @@ export default class FullList extends Component<{}> {
   constructor(props){
     super(props);
   }
+
   render() {
     const { navigate } = this.props.navigation;
     return (
       <View style={{flex: 1}}>
       <Header headerText={'HotelList'} dateTime={dateTime}/>
-      <Search />
       <Body detailFunction={(hotel)=>navigate('HotelDetail',{hotel:hotel})}/>
       </View>
     );

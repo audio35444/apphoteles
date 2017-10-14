@@ -11,7 +11,8 @@ import {
   BackHandler,
   TextInput
 } from 'react-native';
-const {headerContainer,txtSearchStyle} = require('./styles.js');
+import Icon from 'react-native-vector-icons/FontAwesome';
+const {headerContainer,txtSearchStyle,navBarR1,centerContainer,leftContainer,rightContainer} = require('./styles.js');
 
 class Search extends Component{
   constructor(props) {
@@ -20,15 +21,24 @@ class Search extends Component{
   }
   render(){
     return(
+      <View style={navBarR1}>
+        <View style={leftContainer}></View>
+        <View style={centerContainer}>
+        <Icon key={1} name='search' color={'gray'} size={25}/>
+          <TextInput
+            style={txtSearchStyle}
+            onChangeText={(text) => this.props.filterSearch(text)}
+            value={this.props.text}
+            placeholder='Search Hotel'
+            underlineColorAndroid='transparent'
+            />
+<Icon key={1} name='microphone' color={'gray'} size={25}/>
+        </View>
+        <View style={rightContainer}></View>
+      </View>
 
-      <TextInput
-        style={txtSearchStyle}
-        onChangeText={(text) => this.setState({text})}
-        value={this.state.text}
-        placeholder='Search Hotel'
-        underlineColorAndroid='transparent'
-      />
     );
   }
+
 }
 module.exports = Search;

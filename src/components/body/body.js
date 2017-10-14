@@ -9,21 +9,25 @@ import {
   Image,
   View,
   ListView,
+  TextInput,
   BackHandler
 } from 'react-native';
-const {hotelRowStyle,bodyStyle,backgroundImage,btnStyle,rowListViewStyle,listViewStyle,nameHotelStyle,detalleHotelStyle} = require('./styles.js');
+const {hotelRowStyle,textInput,bodyStyle,backgroundImage,btnStyle,rowListViewStyle,listViewStyle,nameHotelStyle,detalleHotelStyle} = require('./styles.js');
 const JSONHoteles = require('../../db/hoteles.js');
 const HotelDetail = require('../detail/hotelDetail.js');
 const Stars = require('../stars/stars.js');
+const Search = require('../search/search.js');
 
 class Body extends Component{
   constructor(props){
     super(props);
     this.state = {
+      text:'',
       dataSource: new ListView.DataSource({
         rowHasChanged:(row1,row2)=>row1 !== row2
       }),
-      loaded:false
+      loaded:false,
+      showEmpty:false
     }
   }
   componentDidMount(){
@@ -65,14 +69,51 @@ class Body extends Component{
       </TouchableHighlight>
     );
   }
+  filterSearch(text){
+    const newData = JSONHoteles.filter((item)=>{
+      // const vectorNames = item.name.toLowerCase().trim().split(' ');
+      // const vectorSearchs = text.toLowerCase().trim().split(' ');
+      // var flag=false;
+      // vectorSearchs.forEach((searchValue)=>{
+      //   flag = false;
+      //   vectorNames.forEach((nameValue)=>{
+      //     if(nameValue.indexOf(searchValue)>-1){
+      //       flag=true;
+      //     }
+      //   });
+      //   if(!flag)return;
+      // });
+      // return flag;
+        const nameValue = item.name.toLowerCase().trim();
+        const searchValue = text.toLowerCase().trim();
+        return nameValue.indexOf(searchValue)>-1
+    })
+    var flag = (newData == null || newData.length<1)
+    this.setState({
+      dataSource:this.state.dataSource.cloneWithRows(newData),
+      text:text,
+      showEmpty:flag
+    });
+  }
   render(){
       if(!this.state.loaded)return this.renderLoadingView();
       return(
-        <ListView
+        <View style={{flex:1}}>
+          <Search
+            filterSearch={(text)=>this.filterSearch(text)}
+            text={this.state.text}
+            />
+        {!this.state.showEmpty && <ListView
           dataSource={this.state.dataSource}
           renderRow={this.renderHotel.bind(this)}
           style={listViewStyle}
-        />
+          enableEmptySections={true}
+        />}
+        {this.state.showEmpty && <Text>List is Empty</Text>
+
+        }
+
+    </View>
       );
   }
   onHotelPress(hotel){
