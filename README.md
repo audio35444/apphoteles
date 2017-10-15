@@ -5,4 +5,4 @@ You can see the screenshots:
 
 Home:
 
-![Screenshot](https://photos.app.goo.gl/llceqr0dUwCMaSXg2)
+![Start App](https://i.imgur.com/oyl88DB.jpg)
