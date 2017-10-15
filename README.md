@@ -7,11 +7,11 @@ It's completely created in react native.
 
 <h3>Start App:</h3>
 
-![Start App](https://i.imgur.com/jT9Bx6R.png)
+![Start App](https://i.imgur.com/UyhY4Fp.png)
 
 <h3>Home:</h3>
 
-![Home](https://i.imgur.com/UyhY4Fp.png)
+![Home](https://i.imgur.com/XKGLx0c.png)
 
 <h3>Hotel List:</h3>
 
