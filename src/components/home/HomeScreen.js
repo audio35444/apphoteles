@@ -2,7 +2,7 @@ import React from 'react';
 import { Text,TouchableHighlight,View,StyleSheet,Image } from 'react-native';
 
 const styles = require('./styles.js');
-
+var wallpaperImg=require('./wallpaper.jpg');
 export default class HomeScreen extends React.Component {
   static navigationOptions={
     title:'Home',
@@ -12,7 +12,7 @@ export default class HomeScreen extends React.Component {
     return (
       <Image
       style={styles.imgFullscreen}
-      source={{uri:'http://www.mobileswall.com/wp-content/uploads/2015/01/640-Relax-l.jpg'}}>
+      source={wallpaperImg}>
         <View style={styles.container}>
           <TouchableHighlight onPress={()=>navigate('FullList',{name:'Juan Emmanuel Diaz 2017'})}>
             <Text style={styles.welcome}>

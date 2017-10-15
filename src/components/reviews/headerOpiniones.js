@@ -37,8 +37,8 @@ class HeaderOpiniones extends Component{
     var styleReview = {justifyContent:'right'};
     var renderElements={
       'review':(render)=>{
-        render.push(<Icon key={1} name='tripadvisor' color='black' size={25}/>);
-        render.push(<Points key={2} cantPoints={2.6} size={18}/>);
+        render.push(<Icon key={1} name='tripadvisor' color='black' size={15}/>);
+        render.push(<Points key={2} cantPoints={2.6} size={15}/>);
         render.push(<TextDetail key={3} detail={textReviewCount} />);
         return render;
       },

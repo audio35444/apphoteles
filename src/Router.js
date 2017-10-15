@@ -1,5 +1,10 @@
 import React from 'react';
 import {Scene,Router} from 'react-native-router-flux';
-const RouterComponent = ()=>{
 
+const RouterComponent = ()=>{
+  return(
+    <Router>
+      <Scene key='' component=
+    </Router>
+  );
 };

@@ -12,11 +12,13 @@ import {
   TextInput,
   BackHandler
 } from 'react-native';
-const {hotelRowStyle,textInput,bodyStyle,backgroundImage,btnStyle,rowListViewStyle,listViewStyle,nameHotelStyle,detalleHotelStyle} = require('./styles.js');
+const {navBarC,hotelRowStyle,textInput,bodyStyle,backgroundImage,btnStyle,rowListViewStyle,listViewStyle,nameHotelStyle,detalleHotelStyle} = require('./styles.js');
 const JSONHoteles = require('../../db/hoteles.js');
 const HotelDetail = require('../detail/hotelDetail.js');
 const Stars = require('../stars/stars.js');
 const Search = require('../search/search.js');
+const InfoMsg = require('../customMessages/infoMsg.js');
+
 
 class Body extends Component{
   constructor(props){
@@ -56,13 +58,14 @@ class Body extends Component{
           borderTopRightRadius={10}
           >
           </Image>
-          <View style={rowListViewStyle}
+          <View style={navBarC}
           borderBottomLeftRadius={10}
           borderBottomRightRadius={10}
           >
-            <View style={{flexDirection:'column'}}><Text style={nameHotelStyle}>{hotel.name}</Text>
-            <Text style={detalleHotelStyle}>ARG {hotel.price}</Text>
-            <Stars size={15} cantStars={hotel.serviceType} color={'yellow'}/>
+            <Text style={nameHotelStyle}>{hotel.name}</Text>
+            <View style={{flexDirection:'row'}}>
+              <Stars size={15} style={{marginRight:25}} cantStars={hotel.serviceType} color={'orange'}/>
+              <Text style={detalleHotelStyle,{marginLeft:25}}>ARG {hotel.price}</Text>
             </View>
           </View>
         </View>
@@ -106,10 +109,10 @@ class Body extends Component{
         {!this.state.showEmpty && <ListView
           dataSource={this.state.dataSource}
           renderRow={this.renderHotel.bind(this)}
-          style={listViewStyle}
+          style={listViewStyle,{marginBottom:10}}
           enableEmptySections={true}
         />}
-        {this.state.showEmpty && <Text>List is Empty</Text>
+        {this.state.showEmpty && <InfoMsg text={"We don't find elements"}/>
 
         }
 

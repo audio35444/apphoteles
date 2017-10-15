@@ -86,6 +86,12 @@ const styles = StyleSheet.create({
     borderRadius:10,
     backgroundColor:'rgba(52,52,52,0)',
     overflow:'hidden'
-  }
+  },
+  imgFullscreen:{
+    flex:1,
+    resizeMode:'cover',
+    width:null,
+    height:null
+  },
 });
 module.exports = styles;

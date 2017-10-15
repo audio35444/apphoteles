@@ -17,6 +17,8 @@ const {imgFullscreen,hotelRowStyle,bodyStyle,backgroundImage,btnStyle,rowListVie
 
 const ThreeRowContainer = require('../reviews/threeRowContainer.js');
 const RoomDescription = require('../mealPlanPicker/roomDescription.js');
+const ImgRotator = require('../imgRotator/imgRotator.js');
+
 
 
 
@@ -64,6 +66,7 @@ class HotelDetail extends Component{
             description={"Is a beautiful hom, because is i live there :P"}
     />
       </MapView>
+      <ImgRotator />
       <ThreeRowContainer hotel={this.state.hotel} key={1} typeContainer={'review'}/>
       <RoomDescription hotel={this.state.hotel} key={2} typeContainer={'room'} />
       <ThreeRowContainer hotel={this.state.hotel} key={3} typeContainer={'review'} />

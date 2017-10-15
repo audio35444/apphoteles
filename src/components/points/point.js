@@ -10,7 +10,6 @@ import {
   View,
   BackHandler
 } from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome';
 
 const styles = require('./styles.js');
 const {imgViewStyle,headerContainer} = require('./styles.js');

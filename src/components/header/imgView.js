@@ -16,8 +16,8 @@ class ImgView extends Component{
   render(){
     return(
       <View style={headerContainer}>
-        <Text>{this.props.count}</Text><Image style={imgViewStyle} source={this.props.uriImg}/>
-
+        <Text>{this.props.count}</Text>
+        <Image style={imgViewStyle} source={this.props.uriImg}/>
       </View>
     );
   }

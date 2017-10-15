@@ -1,5 +1,10 @@
 import {StyleSheet} from 'react-native';
 const styles = StyleSheet.create({
+  navBarC: {
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
   bodyStyle:{
     marginTop:10,
     flexDirection:'row',
@@ -50,7 +55,8 @@ const styles = StyleSheet.create({
   nameHotelStyle:{
     fontSize:25,
     marginBottom:8,
-    textAlign:'center'
+    textAlign:'left',
+    justifyContent:'flex-start'
   },
   backgroundImage:{
     justifyContent:'center',
