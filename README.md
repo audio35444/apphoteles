@@ -6,8 +6,12 @@ It's completely created in react native.
 <h2>Screenshots:<h2>
 
 <h3>Start App:</h3>
-
+<center>
+  
 ![Start App](https://i.imgur.com/UyhY4Fp.png)
+
+</center>
+
 
 <h3>Home:</h3>
 
