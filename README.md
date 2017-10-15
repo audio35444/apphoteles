@@ -5,6 +5,6 @@ You can see the screenshots:
 
 Home:
 <p align="center">
-  ![Start App](https://i.imgur.com/a6onbaX.png)
+![Start App](https://i.imgur.com/a6onbaX.png)
 </p>
 
