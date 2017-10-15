@@ -11,7 +11,7 @@ It's completely created in react native.
 
 <h3>Home:</h3>
 
-![Home](blob:https://imgur.com/eef79074-8b18-4029-96b2-13395994214b)
+![Home](https://i.imgur.com/XKGLx0c.png)
 
 <h3>Hotel List:</h3>
 
