@@ -5,7 +5,7 @@ The Application for search Hotel in your immediacy. It's a demo, not looking for
 It's completely created in react native.
 You can see the screenshots:
 
-<h2>Start App:</h2>
+Start App:
 ![Start App](https://i.imgur.com/jT9Bx6R.png)
 
 <h2>Home:</h2>
