@@ -5,4 +5,4 @@ You can see the screenshots:
 
 Home:
 
-![alt tag](https://photos.app.goo.gl/llceqr0dUwCMaSXg2)
+![Screenshot](https://photos.app.goo.gl/llceqr0dUwCMaSXg2)
