@@ -32,7 +32,7 @@ class ImgRotator extends Component{
     this.state={
       btnLeftColor:'gray',
       btnRightColor:'white',
-      iconLst:iconLst,
+      iconLst:this.props.services,
       _scrollToBottomX:0,
       _scrollToBottomY:0,
       _scrollStateX:0
@@ -43,7 +43,8 @@ class ImgRotator extends Component{
     var renderIcons=[];
     if(this.state.iconLst)
       this.state.iconLst.forEach((icon)=>{
-        renderIcons.push(<ImgElement key={iconLst.indexOf(icon)} icoName={icon.icoName} color={'white'} text={icon.text} positionElement={'center'} marginValue={30}/>);
+        console.log('2432'+iconLst.indexOf(icon));
+        renderIcons.push(<ImgElement key={this.state.iconLst.indexOf(icon)+14} icoName={icon.icoName} color={'white'} text={icon.text} positionElement={'center'} marginValue={30}/>);
       });
 
     return(

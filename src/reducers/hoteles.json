@@ -1,0 +1,296 @@
+[
+  {
+    "id":1,
+    "name":"Burj Al Arab",
+    "uri":"http://t.wallpaperweb.org/wallpaper/buildings/1920x1080/Cityscapes_25.jpg",
+    "serviceType":5,
+    "price":"10.900",
+    "description":"EL hotel es un hotel de los tantos hoteles del mundo moderno encargado de la carga de datos",
+    "location":{
+      "x":25.1401087,
+      "y":55.1846027
+    },
+    "cancelacion":"para realizar la cancelacion de los servicios debe ser con un tiempo muy grande para poder comprar o vender",
+    "includes":"lo incluido es todo lo que esta, y no aquello que no esta",
+    "habitaciones":[
+      {
+        "cantPeople":6,
+        "cantBeds":14
+      },
+      {
+        "cantPeople":2,
+        "cantBeds":2
+      },
+      {
+        "cantPeople":4,
+        "cantBeds":3
+      }
+    ],
+    "servicesHabitacion":[
+      {
+        "nameValue":"hotel",
+        "colorValue":"gray",
+        "textValue":"Solo Habitacion",
+        "selected":false,
+        "price":1000
+      },
+      {
+        "nameValue":"coffee",
+        "colorValue":"gray",
+        "textValue":"Con Desayuno",
+        "selected":true,
+        "price":2500
+      },
+      {
+        "nameValue":"glass",
+        "colorValue":"gray",
+        "textValue":"Con Tragos",
+        "selected":false,
+        "price":3100
+      }
+    ],
+    "services":[
+      {
+        "icoName":"suitcase",
+        "text":"Maleta"
+      },
+      {
+        "icoName":"signal",
+        "text":"Wifi"
+      },
+      {
+        "icoName":"phone",
+        "text":"Teléfono"
+      },
+      {
+        "icoName":"camera",
+        "text":"Camara"
+      },
+      {
+        "icoName":"game-controller",
+        "text":"Video Juego"
+      },
+      {
+        "icoName":"print",
+        "text":"Impresora"
+      },
+      {
+        "icoName":"suitcase",
+        "text":"Maleta"
+      },
+      {
+        "icoName":"signal",
+        "text":"Wifi"
+      },
+      {
+        "icoName":"phone",
+        "text":"Teléfono"
+      },
+    ]
+  },
+  {
+    "id":2,
+    "name":"Hotel Ritz",
+    "uri":"https://t-ec.bstatic.com/images/hotel/max1024x768/170/17030108.jpg",
+    "serviceType":4.2,
+    "price":"8.900",
+    "description":"EL hotel es un hotel de los tantos hoteles del mundo moderno encargado de la carga de datos",
+    "location":{
+      "x":48.8680987,
+      "y":2.3288932
+    },
+    "cancelacion":"para realizar la cancelacion de los servicios debe ser con un tiempo muy grande para poder comprar o vender",
+    "includes":"lo incluido es todo lo que esta, y no aquello que no esta",
+    "habitaciones":[
+      {
+        "cantPeople":6,
+        "cantBeds":14
+      },
+      {
+        "cantPeople":2,
+        "cantBeds":2
+      },
+      {
+        "cantPeople":4,
+        "cantBeds":3
+      }
+    ],
+    "servicesHabitacion":[
+      {
+        "nameValue":"hotel","colorValue":"gray",
+        "textValue":"Solo Habitacion",
+        "selected":true,"price":1000
+      },
+      {
+        "nameValue":"glass",
+        "colorValue":"gray",
+        "textValue":"Con Tragos",
+        "selected":false,"price":3100
+      }
+    ],
+    "services":[
+      {
+        "icoName":"suitcase",
+        "text":"Maleta"
+      },
+      {
+        "icoName":"signal",
+        "text":"Wifi"
+      },
+      {
+        "icoName":"camera",
+        "text":"Camara"
+      },
+      {
+        "icoName":"suitcase",
+        "text":"Maleta"
+      },
+      {
+        "icoName":"signal",
+        "text":"Wifi"
+      },
+      {
+        "icoName":"phone",
+        "text":"Teléfono"
+      },
+    ]
+  },
+  {
+    "id":3,
+    "name":"Hotel George-V",
+    "uri":"https://media-cdn.tripadvisor.com/media/photo-s/04/29/84/c5/four-seasons-hotel-george.jpg",
+    "serviceType":3.2,
+    "price":"6.900",
+    "description":"EL hotel es un hotel de los tantos hoteles del mundo moderno encargado de la carga de datos",
+    "location":{
+      "x":48.8688636,
+      "y":2.3006833
+    },
+    "cancelacion":"para realizar la cancelacion de los servicios debe ser con un tiempo muy grande para poder comprar o vender",
+    "includes":"lo incluido es todo lo que esta, y no aquello que no esta",
+    "habitaciones":[
+      {
+        "cantPeople":6,
+        "cantBeds":14
+      },
+      {
+        "cantPeople":3,
+        "cantBeds":2
+      }
+    ],
+    "servicesHabitacion":[
+      {
+        "nameValue":"hotel","colorValue":"gray",
+        "textValue":"Solo Habitacion",
+        "selected":true,
+        "price":1000
+      },
+      {
+        "nameValue":"glass",
+        "colorValue":"gray",
+        "textValue":"Con Tragos",
+        "selected":false,
+        "price":3100
+      },
+      {
+        "nameValue":"shopping-cart",
+        "colorValue":"gray",
+        "textValue":"Con Shopping",
+        "selected":false,
+        "price":1100
+      },
+      {
+        "nameValue":"key",
+        "colorValue":"gray",
+        "textValue":"Llave del Hotel",
+        "selected":false,
+        "price":900
+      }
+    ],
+    "services":[
+      {
+        "icoName":"envelope",
+        "text":"E-mail"
+      },
+      {
+        "icoName":"camera",
+        "text":"Camara"
+      },
+      {
+        "icoName":"suitcase",
+        "text":"Maleta"
+      },
+      {
+        "icoName":"signal",
+        "text":"Wifi"
+      }
+    ]
+  },
+  {
+    "id":4,
+    "name":"Fairmont Kea Lani, Maui",
+    "uri":"https://media-cdn.tripadvisor.com/media/photo-s/0e/73/e2/cc/fairmont-kea-lani-maui.jpg",
+    "serviceType":5.2,
+    "price":"16.900",
+    "description":"EL hotel es un hotel de los tantos hoteles del mundo moderno encargado de la carga de datos",
+    "location":{
+      "x":20.6747925,
+      "y":-156.4411765
+    },
+    "cancelacion":"para realizar la cancelacion de los servicios debe ser con un tiempo muy grande para poder comprar o vender",
+    "includes":"lo incluido es todo lo que esta, y no aquello que no esta",
+    "habitaciones":[
+      {
+        "cantPeople":6,
+        "cantBeds":14
+      },
+      {
+        "cantPeople":3,
+        "cantBeds":2
+      }
+    ],
+    "servicesHabitacion":[
+      {
+        "nameValue":"hotel","colorValue":"gray",
+        "textValue":"Solo Habitacion",
+        "selected":false,
+        "price":1000
+      },
+      {
+        "nameValue":"glass",
+        "colorValue":"gray",
+        "textValue":"Con Tragos",
+        "selected":false,
+        "price":3100
+      },
+      {
+        "nameValue":"twitter",
+        "colorValue":"gray",
+        "textValue":"Servicio por Twitter",
+        "selected":true,
+        "price":1100
+      },
+      {
+        "nameValue":"bell",
+        "colorValue":"gray",
+        "textValue":"Con campana despertadora",
+        "selected":false,
+        "price":900
+      }
+    ],
+    "services":[
+      {
+        "icoName":"signal",
+        "text":"Wifi"
+      },
+      {
+        "icoName":"suitcase",
+        "text":"Maleta"
+      },
+      {
+        "icoName":"bell",
+        "text":"Mantenimiento"
+      }
+    ]
+  }
+]

@@ -24,6 +24,7 @@ const mealPlantList = [
 ];
 class RoomDescription extends Component{
   render(){
+    console.log(this.props.hotel.servicesHabitacion);
     var callThis=this.props.hotel;
     var sumBeds=0;
     var sumPeople=0;
@@ -48,7 +49,7 @@ class RoomDescription extends Component{
           <View key={3}
           style={{borderBottomColor: 'rgba(0,0,0,0.1)', borderBottomWidth: 2,marginTop:5,marginBottom:5}}
           />
-<MealPlanPicker mealPlantList={mealPlantList}/>
+<MealPlanPicker mealPlantList={mealPlantList} mealPlantList2={this.props.hotel.servicesHabitacion}/>
           <View key={4}
           style={{borderBottomColor: 'rgba(0,0,0,0.1)', borderBottomWidth: 2,marginTop:5,marginBottom:5}}
           />

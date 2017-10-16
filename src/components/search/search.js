@@ -24,7 +24,7 @@ class Search extends Component{
       <View style={navBarR1}>
         <View style={leftContainer}></View>
         <View style={centerContainer}>
-        <Icon key={1} name='search' color={'gray'} size={25}/>
+        <Icon key={41871} name='search' color={'gray'} size={25}/>
           <TextInput
             style={txtSearchStyle}
             onChangeText={(text) => this.props.filterSearch(text)}
@@ -32,7 +32,7 @@ class Search extends Component{
             placeholder='Search Hotel'
             underlineColorAndroid='transparent'
             />
-<Icon key={1} name='microphone' color={'gray'} size={25}/>
+<Icon key={87451} name='microphone' color={'gray'} size={25}/>
         </View>
         <View style={rightContainer}></View>
       </View>

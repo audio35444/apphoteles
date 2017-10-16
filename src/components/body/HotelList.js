@@ -12,6 +12,7 @@ import {
   TextInput,
   BackHandler
 } from 'react-native';
+import {connect} from 'react-redux';
 const {navBarC,hotelRowStyle,textInput,bodyStyle,backgroundImage,btnStyle,rowListViewStyle,listViewStyle,nameHotelStyle,detalleHotelStyle} = require('./styles.js');
 const JSONHoteles = require('../../db/hoteles.js');
 const HotelDetail = require('../detail/hotelDetail.js');
@@ -33,11 +34,12 @@ class Body extends Component{
     }
   }
   componentDidMount(){
+    console.log(this.props.hoteles);
     this.fetchData();
   }
   fetchData(){
     this.setState({
-      dataSource:this.state.dataSource.cloneWithRows(JSONHoteles),
+      dataSource:this.state.dataSource.cloneWithRows(this.props.hoteles),
       loaded:true
     });
   }
@@ -50,7 +52,7 @@ class Body extends Component{
   }
   renderHotel(hotel){
     return(
-      <TouchableHighlight style={btnStyle} onPress={()=>{this.props.detailFunction(hotel)}}>
+      <TouchableHighlight key={hotel.id+'12'} style={btnStyle} onPress={()=>{this.props.detailFunction(hotel)}}>
         <View style={hotelRowStyle}>
           <Image source={{uri:hotel.uri}} style={backgroundImage}
           resizeMode="cover"
@@ -73,7 +75,7 @@ class Body extends Component{
     );
   }
   filterSearch(text){
-    const newData = JSONHoteles.filter((item)=>{
+    const newData = this.props.hoteles.filter((item)=>{
       // const vectorNames = item.name.toLowerCase().trim().split(' ');
       // const vectorSearchs = text.toLowerCase().trim().split(' ');
       // var flag=false;
@@ -123,4 +125,9 @@ class Body extends Component{
     console.log('hola mundo');
   }
 }
-module.exports = Body;
+const mapStateToProps = state =>{
+  return {hoteles:state.hoteles};
+  //el libraries del state es el alias que se coloca en el reducers
+  //el libraries del mapStateToProps es el que esta en el this.props
+};
+export default connect(mapStateToProps)(Body);

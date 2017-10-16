@@ -35,9 +35,14 @@ class HotelDetail extends Component{
     this.state={
       hotel:this.props.navigation.state.params.hotel
     }
+    console.log('ObjHotel');
+    console.log(this.state.hotel.servicesHabitacion);
+    console.log('servicios');
+    console.log(this.state.hotel.services);
+  //  console.log(this.props.hotel.servicesHabitacion);
   }
   render(){
-    var latitude = -31.415236,longitude=-64.218885,latitudeDelta=0.0122,longitudeDelta=0.0121;
+    var latitude = -31.413246,longitude=-64.202104,latitudeDelta=0.0122,longitudeDelta=0.0121;
     var JSONInitRegion = new Object();
     JSONInitRegion.latitude=latitude;
     JSONInitRegion.longitude=longitude;
@@ -58,7 +63,7 @@ class HotelDetail extends Component{
         textAlign:'center',
         color:'rgba(255,255,255,1)'}
       }>ARS {this.state.hotel.price}</Text>
-      <MapView  style={{height: 260, margin: 10}}  showsUserLocation={true}
+      <MapView key={981}  style={{height: 260, margin: 10}}  showsUserLocation={true}
       initialRegion={JSONInitRegion}>
       <MapView.Marker
             coordinate={{latitude: latitude, longitude: longitude}}
@@ -66,10 +71,10 @@ class HotelDetail extends Component{
             description={"Is a beautiful hom, because is i live there :P"}
     />
       </MapView>
-      <ImgRotator />
-      <ThreeRowContainer hotel={this.state.hotel} key={1} typeContainer={'review'}/>
-      <RoomDescription hotel={this.state.hotel} key={2} typeContainer={'room'} />
-      <ThreeRowContainer hotel={this.state.hotel} key={3} typeContainer={'review'} />
+      <ImgRotator key={983} services={this.state.hotel.services} />
+      <ThreeRowContainer key={984} hotel={this.state.hotel} typeContainer={'review'}/>
+      <RoomDescription key={985} hotel={this.state.hotel} typeContainer={'room'} />
+      <ThreeRowContainer key={986} hotel={this.state.hotel} typeContainer={'review'} />
       <View style={rowListViewStyle}
       borderBottomLeftRadius={10}
       borderBottomRightRadius={10}

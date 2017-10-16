@@ -23,11 +23,13 @@ class MealPlanPicker extends Component{
       collapse:true,
       indexSelected:0,
       heightValue:50,
-      mealPlantList:this.props.mealPlantList,
+      mealPlantList:this.props.mealPlantList2,
       text:'Este texto se va a cambiar',
       animate:new Animated.Value(50),
       animateXY:new Animated.ValueXY({x:0,y:0})
     };
+    console.log('desde el MealPlanPicker');
+    console.log(this.props.mealPlantList2);
 
     //var sizeAnimated=!this.state.collapse?50:0;
     this.state.mealPlantList.forEach((element)=>{
@@ -66,7 +68,7 @@ class MealPlanPicker extends Component{
     var sizeButton=0;
     var mealPlantList = this.state.mealPlantList
       mealPlantList.forEach((element)=>{
-          renderMPP.push(<TouchableHighlight key={mealPlantList.indexOf(element)+1} style={{height:callBackThis.state[element.nameValue]}} onPress={()=>{
+          renderMPP.push(<TouchableHighlight key={mealPlantList.indexOf(element)+'471'} style={{height:callBackThis.state[element.nameValue]}} onPress={()=>{
 
               var  resultLst = mealPlantList.map((x)=>{
                   if(x.nameValue==element.nameValue)x.selected=true;
@@ -83,7 +85,7 @@ class MealPlanPicker extends Component{
                 if(callBackThis.state.collapse) callBackThis.setState({collapse:false});
                 else callBackThis.setState({collapse:true});
                 }}>
-            <MealPlan key={mealPlantList.indexOf(element)} isSelected={callBackThis.state.mealPlantList[mealPlantList.indexOf(element)].selected} nameValue={element.nameValue} colorValue={element.colorValue} textValue={element.textValue} collapse={callBackThis.state.collapse}/>
+            <MealPlan key={mealPlantList.indexOf(element)+'521'} isSelected={callBackThis.state.mealPlantList[mealPlantList.indexOf(element)].selected} nameValue={element.nameValue} colorValue={element.colorValue} textValue={element.textValue} collapse={callBackThis.state.collapse}/>
           </TouchableHighlight>)
       });
 

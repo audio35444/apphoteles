@@ -11,9 +11,13 @@ import {
   Text,
   View
 } from 'react-native';
+import {Provider} from 'react-redux';
+import {createStore} from 'redux';
+import reducers from '../../reducers';
+import Body from '../body/HotelList.js';
 
 const Header = require('../header/header.js');
-const Body = require('../body/body.js');
+//const Body = require('../body/HotelList.js');
 const Search = require('../search/search.js');
 
 
@@ -35,7 +39,9 @@ export default class FullList extends Component<{}> {
     return (
       <View style={{flex: 1}}>
       <Header headerText={'HotelList'} dateTime={dateTime}/>
-      <Body detailFunction={(hotel)=>navigate('HotelDetail',{hotel:hotel})}/>
+      <Provider store={createStore(reducers)}>
+        <Body detailFunction={(hotel)=>navigate('HotelDetail',{hotel:hotel})}/>
+      </Provider>
       </View>
     );
   }
