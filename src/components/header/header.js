@@ -32,7 +32,6 @@ class Header extends Component{
           <Text style={titleStyle}>{this.props.headerText}</Text>
           <Text style={subtitleStyle}>{this.props.dateTime}</Text>
         </View>
-        <View key={2} style={centerContainer}></View>
         <View key={3} style={rightContainer}>
           <Text style={{marginLeft:5,marginRight:15,marginBottom:5,fontSize:35,color:'rgba(255,255,255,0.2)'}}>|</Text>
           <Icon2 name='ios-people' color='white' size={50} style={{marginRight:5}}/>

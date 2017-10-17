@@ -4,6 +4,10 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     justifyContent: 'space-between',
     alignItems: 'center',
+    borderWidth:1,
+    borderColor:'rgba(0,0,0,0.1)',
+    borderBottomLeftRadius:10,
+    borderBottomRightRadius:10,
   },
   bodyStyle:{
     marginTop:10,

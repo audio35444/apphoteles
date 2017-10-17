@@ -76,19 +76,7 @@ class Body extends Component{
   }
   filterSearch(text){
     const newData = this.props.hoteles.filter((item)=>{
-      // const vectorNames = item.name.toLowerCase().trim().split(' ');
-      // const vectorSearchs = text.toLowerCase().trim().split(' ');
-      // var flag=false;
-      // vectorSearchs.forEach((searchValue)=>{
-      //   flag = false;
-      //   vectorNames.forEach((nameValue)=>{
-      //     if(nameValue.indexOf(searchValue)>-1){
-      //       flag=true;
-      //     }
-      //   });
-      //   if(!flag)return;
-      // });
-      // return flag;
+
         const nameValue = item.name.toLowerCase().trim();
         const searchValue = text.toLowerCase().trim();
         return nameValue.indexOf(searchValue)>-1
@@ -111,7 +99,7 @@ class Body extends Component{
         {!this.state.showEmpty && <ListView
           dataSource={this.state.dataSource}
           renderRow={this.renderHotel.bind(this)}
-          style={listViewStyle,{marginBottom:10}}
+          style={listViewStyle,{marginBottom:10,marginLeft:10,marginRight:10}}
           enableEmptySections={true}
         />}
         {this.state.showEmpty && <InfoMsg text={"We don't find elements"}/>

@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    height:50,
+    height:60,
   },
   navBarR1: {
     flexDirection: 'row',
@@ -51,12 +51,12 @@ const styles = StyleSheet.create({
   titleStyle:{
     fontSize:20,
     color:'white',
-    marginLeft:15
+    marginLeft:10
   },
   subtitleStyle:{
     fontSize:15,
     color:'white',
-    marginLeft:15
+    marginLeft:10
   },
   textContainer:{
     flexDirection:'column',

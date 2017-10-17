@@ -40,7 +40,7 @@ export default class FullList extends Component<{}> {
       <View style={{flex: 1}}>
       <Header headerText={'HotelList'} dateTime={dateTime}/>
       <Provider store={createStore(reducers)}>
-        <Body detailFunction={(hotel)=>navigate('HotelDetail',{hotel:hotel})}/>
+        <Body  detailFunction={(hotel)=>navigate('HotelDetail',{hotel:hotel})}/>
       </Provider>
       </View>
     );

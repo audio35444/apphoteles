@@ -42,7 +42,7 @@ class HotelDetail extends Component{
   //  console.log(this.props.hotel.servicesHabitacion);
   }
   render(){
-    var latitude = -31.413246,longitude=-64.202104,latitudeDelta=0.0122,longitudeDelta=0.0121;
+    var latitude = this.state.hotel.location.x,longitude=this.state.hotel.location.y,latitudeDelta=0.0122,longitudeDelta=0.0121;
     var JSONInitRegion = new Object();
     JSONInitRegion.latitude=latitude;
     JSONInitRegion.longitude=longitude;
