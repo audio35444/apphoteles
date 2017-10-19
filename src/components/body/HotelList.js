@@ -19,6 +19,7 @@ const HotelDetail = require('../detail/hotelDetail.js');
 const Stars = require('../stars/stars.js');
 const Search = require('../search/search.js');
 const InfoMsg = require('../customMessages/infoMsg.js');
+import Firebase from '../../lib/firebase.js';
 
 
 class Body extends Component{
@@ -32,15 +33,32 @@ class Body extends Component{
       loaded:false,
       showEmpty:false
     }
+    this.itemsRef = Firebase.database().ref();
+  }
+  componentWillMount(){
+
   }
   componentDidMount(){
-    console.log(this.props.hoteles);
-    this.fetchData();
+    this.listenForItems(this.itemsRef);
   }
   fetchData(){
     this.setState({
       dataSource:this.state.dataSource.cloneWithRows(this.props.hoteles),
       loaded:true
+    });
+  }
+  listenForItems(itemsRef) {
+    itemsRef.on('value',(hoteles)=>{
+      var items = [];
+      if(hoteles.val()){
+        hoteles.val()['hoteles'].forEach((element)=>{
+          items.push(element);
+        });
+        this.setState({
+          dataSource: this.state.dataSource.cloneWithRows(items),
+          loaded:true
+        });
+      }
     });
   }
   renderLoadingView(){
@@ -113,9 +131,5 @@ class Body extends Component{
     console.log('hola mundo');
   }
 }
-const mapStateToProps = state =>{
-  return {hoteles:state.hoteles};
-  //el libraries del state es el alias que se coloca en el reducers
-  //el libraries del mapStateToProps es el que esta en el this.props
-};
-export default connect(mapStateToProps)(Body);
+
+export default Body;
