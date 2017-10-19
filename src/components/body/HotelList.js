@@ -31,7 +31,8 @@ class Body extends Component{
         rowHasChanged:(row1,row2)=>row1 !== row2
       }),
       loaded:false,
-      showEmpty:false
+      showEmpty:false,
+      hoteles:[]
     }
     this.itemsRef = Firebase.database().ref();
   }
@@ -40,12 +41,6 @@ class Body extends Component{
   }
   componentDidMount(){
     this.listenForItems(this.itemsRef);
-  }
-  fetchData(){
-    this.setState({
-      dataSource:this.state.dataSource.cloneWithRows(this.props.hoteles),
-      loaded:true
-    });
   }
   listenForItems(itemsRef) {
     itemsRef.on('value',(hoteles)=>{
@@ -56,10 +51,13 @@ class Body extends Component{
         });
         this.setState({
           dataSource: this.state.dataSource.cloneWithRows(items),
-          loaded:true
+          loaded:true,
+          hoteles:items,
+          text:''
         });
       }
     });
+
   }
   renderLoadingView(){
     return(
@@ -93,7 +91,7 @@ class Body extends Component{
     );
   }
   filterSearch(text){
-    const newData = this.props.hoteles.filter((item)=>{
+    const newData = this.state.hoteles.filter((item)=>{
 
         const nameValue = item.name.toLowerCase().trim();
         const searchValue = text.toLowerCase().trim();
@@ -106,6 +104,7 @@ class Body extends Component{
       showEmpty:flag
     });
   }
+
   render(){
       if(!this.state.loaded)return this.renderLoadingView();
       return(
