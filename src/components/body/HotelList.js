@@ -20,6 +20,7 @@ const Stars = require('../stars/stars.js');
 const Search = require('../search/search.js');
 const InfoMsg = require('../customMessages/infoMsg.js');
 import Firebase from '../../lib/firebase.js';
+import {ListenForItems} from '../../lib/queries.js';
 
 
 class Body extends Component{
@@ -34,31 +35,31 @@ class Body extends Component{
       showEmpty:false,
       hoteles:[]
     }
-    this.itemsRef = Firebase.database().ref();
+    //this.itemsRef = Firebase.database().ref();
   }
   componentWillMount(){
-
+    ListenForItems(this);
   }
   componentDidMount(){
-    this.listenForItems(this.itemsRef);
+    //this.listenForItems(this.itemsRef);
   }
-  listenForItems(itemsRef) {
-    itemsRef.on('value',(hoteles)=>{
-      var items = [];
-      if(hoteles.val()){
-        hoteles.val()['hoteles'].forEach((element)=>{
-          items.push(element);
-        });
-        this.setState({
-          dataSource: this.state.dataSource.cloneWithRows(items),
-          loaded:true,
-          hoteles:items,
-          text:''
-        });
-      }
-    });
-
-  }
+  // listenForItems(itemsRef) {
+  //   itemsRef.on('value',(hoteles)=>{
+  //     var items = [];
+  //     if(hoteles.val()){
+  //       hoteles.val()['hoteles'].forEach((element)=>{
+  //         items.push(element);
+  //       });
+  //       this.setState({
+  //         dataSource: this.state.dataSource.cloneWithRows(items),
+  //         loaded:true,
+  //         hoteles:items,
+  //         text:''
+  //       });
+  //     }
+  //   });
+  //
+  // }
   renderLoadingView(){
     return(
       <View style={bodyStyle}>
