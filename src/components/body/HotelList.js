@@ -13,6 +13,7 @@ import {
   BackHandler
 } from 'react-native';
 import {connect} from 'react-redux';
+const Loader = require('../loader/loader.js');
 const {navBarC,hotelRowStyle,textInput,bodyStyle,backgroundImage,btnStyle,rowListViewStyle,listViewStyle,nameHotelStyle,detalleHotelStyle} = require('./styles.js');
 const JSONHoteles = require('../../db/hoteles.js');
 const HotelDetail = require('../detail/hotelDetail.js');
@@ -21,8 +22,6 @@ const Search = require('../search/search.js');
 const InfoMsg = require('../customMessages/infoMsg.js');
 import Firebase from '../../lib/firebase.js';
 import {ListenForItems} from '../../lib/queries.js';
-
-
 class Body extends Component{
   constructor(props){
     super(props);
@@ -62,9 +61,7 @@ class Body extends Component{
   // }
   renderLoadingView(){
     return(
-      <View style={bodyStyle}>
-        <Text>Loading...</Text>
-      </View>
+      <Loader/>
     );
   }
   renderHotel(hotel){

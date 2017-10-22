@@ -11,6 +11,7 @@ import {
   BackHandler,
   ScrollView
 } from 'react-native';
+import {ListenForId} from '../../lib/queries.js';
 const {rowListViewStyle,leftContainer,rightContainer,centerContainer} = require('./styles.js');
 const ImgElement = require('./imgElement.js');
 
@@ -38,12 +39,12 @@ class ImgRotator extends Component{
       _scrollStateX:0
     };
   }
+
   render(){
     var callThis=this;
     var renderIcons=[];
     if(this.state.iconLst)
       this.state.iconLst.forEach((icon)=>{
-        console.log('2432'+iconLst.indexOf(icon));
         renderIcons.push(<ImgElement key={this.state.iconLst.indexOf(icon)+14} icoName={icon.icoName} color={'white'} text={icon.text} positionElement={'center'} marginValue={30}/>);
       });
 
